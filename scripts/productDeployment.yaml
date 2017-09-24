@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: productws
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: productws
+    spec:
+      containers:
+      - name: productws
+        image: abenitezsan/productservice
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: productws-service
+spec:
+  selector:
+    app: productws
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: NodePort

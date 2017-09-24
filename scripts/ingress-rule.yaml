@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: customer-ingress
+ annotations:
+  ingress.kubernetes.io/rewrite-target: /
+spec:
+ rules:
+   - host:
+     http:
+       paths:
+         - path: /customer
+           backend:
+             serviceName: customerws-service
+             servicePort: 8080
+         - path: /product
+           backend:
+             serviceName: productws-service
+             servicePort: 8080

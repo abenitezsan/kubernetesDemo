@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/customerService/customerservice (1).iml" filepath="$PROJECT_DIR$/customerService/customerservice (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/demoKubernetes.iml" filepath="$PROJECT_DIR$/.idea/demoKubernetes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/productService/productService.iml" filepath="$PROJECT_DIR$/productService/productService.iml" />
+    </modules>
+  </component>
+</project>
